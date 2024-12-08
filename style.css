@@ -1,0 +1,32 @@
+h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+p {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  line-height: 20px;
+  text-align: center;
+}
+
+button {
+  text-align: center;
+  width: 100px;
+  height: 40px;
+  background-color: #182189;
+  color: #000000;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  border-style: none;
+  margin-left: 125px;
+  
+}
+
+button:hover {
+  transform: translateY(30px);
+  background-color: greenyellow;
+}
