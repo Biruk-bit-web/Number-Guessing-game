@@ -30,3 +30,8 @@ button:hover {
   transform: translateY(30px);
   background-color: greenyellow;
 }
+
+img {
+  width: 200px;
+  height: 20px;
+}
