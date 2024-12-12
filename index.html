@@ -1,31 +1,119 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Biruk Bizunehe, Front-End Developer skilled in HTML, CSS, and JavaScript.">
+  <title>Biruk Bizunehe - Front-End Developer Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-      <h1>Welcome To My Portfolio Website</h1>
-      <nav>
-        <a href="" class="a">Projects</a> |
-        <a href="" class="a">Skills</a> |
-        <a href="" class="a">About Me</a> |
-        <a href="" class="a">Contact</a> |
-      </nav>
-      <img src="1.img" alt="1.img">
-      <h3>Biruk Bizunehe</h3>
-      <p>
-       Web Developer Specializing in Front-End Development
-      </p>
-      
-      <h4>a short introduction or missin statement</h4>
-      <p>I am an experienced software developer relocating to San Francisco in August and seeking employment with a fast-growing startup. I bring more than eight years experience writing JavaScript and more than ten years experience in the technology industry.</p>
-      
-      a
-</body>
+  <header>
+    <nav>
+      <ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+        <li><a href="/navigations /about.html">About</a></li>
+        <li><a href="work.html">Portfolio</a></li>
+        <li><a href="/navigations /contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Hi, I'm Biruk Bizunehe</h1>
+        <p>A Passionate Front-End Developer</p>
+        <button><a href="work.html">View My Work</a></button>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <h2>About Me</h2>
+      <p>
+        I'm Biruk Bizunehe, a front-end developer skilled in HTML, CSS, and JavaScript.
+        I enjoy creating visually appealing and user-friendly websites.
+        My passion lies in bringing designs to life through clean and efficient code.
+      </p>
+      <div class="skills">
+        <h3>Skills</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS (including animations and responsive design)</li>
+          <li>JavaScript</li>
+          <li>Basic React</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio">
+  <h2>My Work</h2>
+  <div class="projects">
+    <div class="project">
+      <h3>Number Guessing Game</h3>
+      <p>A fun game with multiple levels and increasing difficulty.</p>
+    </div>
+    <div class="project">
+      <h3>To-Do List App</h3>
+      <p>A sleek and functional To-Do List App with task management features.</p>
+    </div>
+    <div class="project">
+      <h3>Parallax Scrolling Website</h3>
+      <p>A visually stunning website utilizing parallax scrolling effects for an immersive experience.</p>
+    </div>
+    <div class="project">
+      <h3>Responsive Blog Website</h3>
+      <p>A clean and modern blog website optimized for all devices.</p>
+    </div>
+    <div class="project">
+      <h3>Landing Page Design</h3>
+      <p>Designed and developed a professional landing page for a startup.</p>
+    </div>
+    <div class="project">
+      <h3>Weather App</h3>
+      <p>An interactive weather application displaying real-time data for any city.</p>
+    </div>
+  </div>
+</section>
+
+    <section class="contact-page">
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+          <input type="text" id="name" name="user_name" placeholder="Your Name" required>
+          <input type="email" id="email" name="user_email" placeholder="Your Email" required>
+          <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+        <p id="formStatus" style="margin-top: 1rem; font-weight: bold; color: green;"></p>
+        </section>
+        </main>
+  
+        <footer>
+          <p>&copy; 2024 Biruk Bizunehe. All Rights Reserved.</p>
+        </footer>
+  
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script>
+          (function() {
+            emailjs.init("27lk2nJPD1HlLWePe"); // Replace with your EmailJS public key
+          })();
+  
+          document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+  
+            emailjs.sendForm("service_xk6z77a", "template_for5qhr", this)
+              .then(() => {
+                document.getElementById("formStatus").textContent = "Message Sent Successfully!";
+                document.getElementById("contactForm").reset();
+              }, (error) => {
+                document.getElementById("formStatus").textContent = "Failed to Send Message.";
+                console.error(error);
+              });
+          });
+        </script>
+</body>
 </html>
